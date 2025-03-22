@@ -1,0 +1,957 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* Navbar */
+
+#navbarnav {
+    width: 100%;
+}
+
+#navbarnav a{
+    color: #ffffff;
+    font-size: 1.7vh;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out; 
+}
+
+#navbarnav a:hover{
+    color: #e64500;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    transform: scale(1.1);
+}
+
+#navbarnav ul{
+    gap: 25px;
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 10px;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+}
+/* Main */
+
+.title-detail {
+    color: #FF5D00;
+    text-decoration: underline;
+}
+
+/* background */
+.fundo {
+    background-image: url("../imagens/fundo.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+    padding-left: 5%;
+}
+
+.fundo img{
+    height: 100%;
+}
+
+.div-wlc{
+    color: #fff;
+    margin-left: 100px;
+    margin-bottom: 50px;
+}
+
+.div-wlc h1{
+    font-weight: bold;
+    font-size: 6em;
+}
+
+.tigertec{
+    color: #FF5D00;
+    margin-top: -20px;
+}
+
+.div-btn-tgr{
+    display: flex;
+    justify-content: start;
+    width: 100%;
+}
+
+/* button */
+
+.welcome-container {
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    color: #fff;
+    padding: 80px 0;
+    position: relative;
+}
+
+.welcome-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.welcome-content {
+    position: relative;
+    z-index: 2;
+}
+
+.heading-welcome {
+    font-size: 5rem;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.tigerstec {
+    color: #FF5D00;
+    text-decoration: underline;
+    font-weight: 900;
+}
+
+.btn-contrate {
+    width: 15em;
+    height: 2.2em;
+    margin: 0.3em;
+    background: linear-gradient(to right, #ff7a00, #ff4d00);
+    color: white;
+    border: none;
+    border-radius: 1.625em;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+}
+
+.btn-contrate:hover {
+    color: rgb(0, 0, 0);
+}
+
+.btn-contrate:after {
+    content: "";
+    background: rgb(255, 255, 255);
+    position: absolute;
+    z-index: -1;
+    left: -20%;
+    right: -20%;
+    top: 0;
+    bottom: 0;
+    transform: skewX(-45deg) scale(0, 1);
+    transition: all 0.5s;
+}
+
+.btn-contrate:hover:after {
+    transform: skewX(-45deg) scale(1, 1);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+/* Media queries */
+@media (max-width: 1199.98px) {
+    .heading-welcome {
+        font-size: 4.5rem;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .heading-welcome {
+        font-size: 4rem;
+    }
+    
+    .btn-contrate {
+        padding: 12px 35px;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .welcome-container {
+        padding: 60px 0;
+    }
+    
+    .heading-welcome {
+        font-size: 3.2rem;
+    }
+    
+    .btn-contrate {
+        padding: 10px 30px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .welcome-container {
+        padding: 40px 0;
+    }
+    
+    .heading-welcome {
+        font-size: 2.5rem;
+    }
+    
+    .btn-contrate {
+        padding: 10px 25px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 350px) {
+    .heading-welcome {
+        font-size: 2rem;
+    }
+}
+
+
+/*formulário*/
+
+
+.btn-contrate:hover {
+    background-color: #e64500;
+}
+
+body.escurecido .btn-contrate {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+/* Estilo do modal */
+.modal-content {
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+}
+
+.modal-header {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.modal-title {
+    color: #ff4d00;
+    width: 100%;
+    text-align: center;
+}
+
+.modal-footer {
+    border-top: none;
+    justify-content: space-between;
+}
+
+.modal-body {
+    padding: 20px 0;
+}
+
+.imagens {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.imagens img {
+    width: 100px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.form-control {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+textarea.form-control {
+    resize: vertical;
+    height: 100px;
+}
+
+.btn-form {
+    width: 10em;
+    height: 2.2em;
+    margin: 0.3em;
+    background: linear-gradient(to right, #ff7a00, #ff4d00);
+    color: white;
+    border: none;
+    border-radius: 0.625em;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.btn-form:hover {
+    color: rgb(0, 0, 0);
+}
+
+.btn-form:after {
+    content: "";
+    background: rgb(255, 255, 255);
+    position: absolute;
+    z-index: -1;
+    left: -20%;
+    right: -20%;
+    top: 0;
+    bottom: 0;
+    transform: skewX(-45deg) scale(0, 1);
+    transition: all 0.5s;
+}
+
+.btn-form:hover:after {
+    transform: skewX(-45deg) scale(1, 1);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.mensagem-erro {
+    color: red;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.success-icon {
+    font-size: 50px;
+    color: rgb(197, 86, 7);
+    margin-bottom: 20px;
+}
+
+/* Animações para transição entre partes */
+.slide-out {
+    animation: slideOut 0.5s forwards;
+}
+
+/* Fim de formulario */
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+}
+/* Animação de transição entre as partes */
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+
+.form-part {
+    display: none; /* Inicialmente oculto */
+    animation: slideIn 0.5s ease forwards;
+}
+
+.form-part.slide-out {
+    animation: slideOut 0.5s ease forwards;
+}
+
+/* Exibir a parte ativa */
+.form-part.active {
+    display: block;
+}
+
+/* Animação de "pulo" para a mensagem de sucesso */
+@keyframes jump {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+#part3 h2 {
+    animation: jump 0.5s ease 2; /* Pula duas vezes */
+}
+/* carrossel formulario */
+.carrossel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.imagem-carrossel {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 8px;
+    transition: opacity 1s ease-in-out;
+}
+
+/* 1° Section - Sobre Nós */
+
+.sobrenos {
+    background-image: url("../imagens/sobrenos.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 5%;
+}
+
+
+.title-section {
+    color: #ffffff;
+    font-weight: 700;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+.title-detail {
+    color: #FF5D00;
+    font-weight: 700;
+}
+
+.title-what {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.text1, .text2 {
+    background-color: #0e0d0d75;
+    border: 2px solid rgb(233, 109, 26);
+    color: #ffffff;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    width: 100%;
+    height: 440px;
+    gap: 20px;
+}
+
+
+.text1 p, .text2 p {
+    line-height: 1.6;
+}
+
+/* Media queries */
+@media (max-width: 991.98px) {
+    .sobrenos {
+        padding: 40px 0;
+    }
+    
+    .title-section {
+        font-size: 2.2rem;
+    }
+    
+    .title-what {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+    
+    .text1, .text2 {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .title-section {
+        font-size: 2rem;
+    }
+    
+    .linha-horizontal {
+        margin: 15px auto;
+    }
+    
+    .text1 p, .text2 p {
+        font-size: 1rem;
+        text-align: center;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .sobrenos {
+        padding: 30px 0;
+    }
+    
+    .title-section {
+        font-size: 1.8rem;
+    }
+    
+    .title-what {
+        font-size: 1.4rem;
+    }
+}
+/* 2° Section - Sobre nós #2 */
+
+.sobrenos2 {
+    background-image: url("../imagens/sobrenos2.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#sobrenos2-divCelular {
+    background-image: url("../imagens/tigrincelular.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 700px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#tela-divCelular {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40%;
+    margin-left: 10px;
+    width: 325px;
+    height: 550px;
+    overflow: hidden;
+    background-color: #6363633e;
+    padding-top: 2em;
+    border-radius: 5px;
+}
+
+#text-divCelular {
+    text-align: center;
+    width: 300px;
+    height: 400px;
+    margin-bottom: 25%;
+    overflow: hidden;
+}
+
+#text-divCelular p {
+    font-size: 19px;
+    color: #ffffff;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    margin: auto;
+}
+
+/* Section 3 - valores */
+
+
+.valores {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+    background-image: url("../imagens/fundovalores.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px; 
+} 
+
+
+#conteinerideais {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; 
+    gap: 150px; 
+    max-width: 1200px; 
+    width: 100%; 
+}
+
+.card-vlr {
+    background-color: #000000;
+    border: 2px solid #FF5D00;
+    border-radius: 10px; 
+    padding: 20px;
+    width: 300px;
+    height: 650px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+
+.card-vlr:hover {
+    transform: scale(1.2); 
+    box-shadow: 0 4px 20px rgba(255, 93, 0, 0.5); 
+}
+
+.card-vlr h1 {
+    font-size: 1.5em;
+    color: #FF5D00;
+    margin-bottom: 10px;
+}
+
+
+.card-vlr p {
+    font-size: 1em;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* Section 4 - Equipes carrosel */
+
+.equipe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(#c94f08, #000000);
+}
+
+.card-wrapper {
+    max-width: 1110px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px 0;
+    overflow: hidden;
+}
+
+.card-list {
+    display: flex;
+    padding: 0;
+}
+
+.card-list .card-item {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Adicionado para centralizar verticalmente */
+}
+
+.card-list .card-item .card-link {
+    user-select: none;
+    display: block;
+    background: #000000;
+    padding: 18px;
+    border-radius: 10px;
+    text-decoration: none;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
+    transition: 0.2s ease;
+    width: 100%; /* Garante que o link ocupe toda a largura do slide */
+}
+
+.card-list .card-link .card-image {
+    width: 100%;
+    height: 400px;
+    aspect-ratio: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card-list .card-link .badge {
+    color: #e64500;
+    padding: 8px 16px;
+    margin: 16px 0 18px;
+    background: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 500;
+    width: fit-content;
+    border-radius: 50px;
+}
+
+.card-list .card-link .card-title {
+    font-size: 1.19rem;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+
+
+.card-list .card-link:hover .card-button {
+    color: #fff;
+    background: #ff8800;
+}
+
+.card-wrapper .swiper-pagination-bullet {
+    height: 13px;
+    width: 13px;
+    opacity: 0.5;
+    background-color: #ffffff;
+}
+
+.card-wrapper .swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+.card-wrapper .swiper-slide-button {
+    color: #000000;
+    margin-top: -35px;
+}
+
+/* Responsivo */
+
+@media screen and (max-width:768px){
+    .card-wrapper{
+        margin: 0 10px 25px;
+    }
+
+    .card-wrapper .swiper-slide-button{
+        display: none;
+
+    }
+}
+
+/* Estilos para telas 768px (celular) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .div-wlc h1 {
+        font-size: 3em;
+    }
+
+    .fundo {
+        justify-content: center;
+        padding-left: 0;
+    }
+
+    .sobrenos, .sobrenos2, .valores {
+        height: auto;
+        padding: 20px;
+    }
+
+    #sobrenos-text {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .text1, .text2 {
+        width: 100%;
+        height: auto;
+    }
+
+    .linha {
+        height: 5px;
+        width: 80%;
+        margin: 20px auto;
+    }
+
+    #sobrenos2-divCelular {
+        width: 100%;
+        height: auto;
+    }
+
+    #tela-divCelular {
+        width: 90%;
+        height: auto;
+        margin-top: 20%;
+    }
+
+    #text-divCelular {
+        width: 90%;
+        height: auto;
+        margin-bottom: 10%;
+    }
+
+    .card {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Estilos para telas entre 768px e 1024px (tablets) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .div-wlc h1 {
+        font-size: 4em;
+    }
+
+    .fundo {
+        justify-content: center;
+        padding-left: 0;
+    }
+
+    .sobrenos, .sobrenos2, .valores {
+        height: auto;
+        padding: 20px;
+    }
+
+    #sobrenos-text {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .text1, .text2 {
+        width: 100%;
+        height: auto;
+    }
+
+    .linha {
+        height: 5px;
+        width: 80%;
+        margin: 20px auto;
+    }
+
+    #sobrenos2-divCelular {
+        width: 100%;
+        height: auto;
+    }
+
+    #tela-divCelular {
+        width: 90%;
+        height: auto;
+        margin-top: 20%;
+    }
+
+    #text-divCelular {
+        width: 90%;
+        height: auto;
+        margin-bottom: 10%;
+    }
+
+    .card {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+.footer {
+    background-color: black;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%; /* Garante que o footer ocupe toda a largura */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px; /* Largura máxima do conteúdo */
+    margin: 0 auto; /* Centraliza o container */
+    padding: 0 20px; /* Adiciona um padding lateral */
+    flex-wrap: wrap;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+    flex: 1;
+    padding: 10px;
+    min-width: 250px; /* Garante que as colunas não fiquem muito estreitas */
+}
+
+.footer-left p,
+.footer-center p {
+    font-size: 14px;
+    margin-bottom: 10px; /* Ajuste no espaçamento */
+}
+
+.footer-right ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-right li {
+    display: inline;
+    margin-right: 10px;
+}
+
+.footer-right a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-right a:hover {
+    text-decoration: underline;
+}
+
+.footer-right img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer-right img:hover {
+    transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-left,
+    .footer-center,
+    .footer-right {
+        margin-bottom: 20px; /* Aumenta o espaçamento entre as seções */
+    }
+
+    .footer-right ul {
+        padding: 0;
+    }
+
+    .footer-right li {
+        display: block;
+        margin-bottom: 10px;
+    }
+}
+
+.card-description {
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+    line-height: 1.5;
+}
