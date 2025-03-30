@@ -4,6 +4,33 @@ $(document).ready(function() {
         keyboard: false
     });
 
+        $('.navbar-nav .nav-link').on('click', function(e) {
+            // Obtenha o destino do link
+            var target = $(this).attr('href');
+            
+            // Verifique se estamos em uma tela pequena onde o menu está colapsado
+            if ($('.navbar-toggler').is(':visible')) {
+                // Feche o menu
+                $('.navbar-collapse').collapse('hide');
+                
+                // Adicione um pequeno atraso para dar tempo para o menu fechar
+                setTimeout(function() {
+                    $('html, body').animate({
+                        scrollTop: $(target).offset().top// Ajuste para compensar a altura da navbar
+                    }, 200);
+                }, 100);
+                
+                e.preventDefault(); 
+            } else {
+
+                $('html, body').animate({
+                    scrollTop: $(target).offset().top 
+                }, 200);
+                
+                e.preventDefault();
+            }
+        });
+
     // Função para abrir o formulário e resetar os campos
     $('#abrirFormulario').on('click', function() {
         $('body').addClass('escurecido');
@@ -94,4 +121,47 @@ $(document).ready(function() {
     $('#servicoModal').on('hidden.bs.modal', function () {
         $('body').removeClass('escurecido');
     });
+
+     // Carrossel
+    new Swiper('.card-wrapper', {
+        loop: true,
+        spaceBetween: 20, // Espaço entre os slides
+
+        // Paginação
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            dynamicBullets: true
+        },
+
+        // Navegação
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        breakpoints: {
+            0: {
+                slidesPerView: 1
+            },
+            768: {
+                slidesPerView: 2
+            },
+            1024: {
+                slidesPerView: 3
+            },
+        }
+    });
+
+     /* AOS */  
+    AOS.init({
+
+        duration: 1000,       // Duração da animação (ms)
+        easing: 'ease-in-out', // Curva de aceleração (pode usar 'ease', 'linear', etc.)
+        once: false,         // Animação ocorre apenas uma vez
+    });
+    
 });
+
+
+

@@ -1,21 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
     background-color: rgb(0, 0, 0);
-    font-family: 'Poppins', sans-serif;
 }
 
-
 /* Navbar */
-
 #navbarnav {
-    width: 100%;
+    width: 100;
 }
 
 #navbarnav a{
@@ -44,22 +38,12 @@ body {
     box-shadow: none;
 }
 
-@media (max-width: 991.98px) {
-    .navbar-collapse {
-        background-color: rgba(0, 0, 0, 0.8);
-        padding: 10px;
-        border-radius: 5px;
-        margin-top: 10px;
-    }
-}
 /* Main */
-
 .title-detail {
     color: #FF5D00;
     text-decoration: underline;
 }
 
-/* background */
 .fundo {
     background-image: url("../imagens/fundo.png");
     background-size: cover;
@@ -69,12 +53,8 @@ body {
     height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: flex-start; 
+    justify-content: flex-start;
     padding-left: 5%;
-}
-
-.fundo img{
-    height: 100%;
 }
 
 .div-wlc{
@@ -100,7 +80,6 @@ body {
 }
 
 /* button */
-
 .welcome-container {
     background-size: cover;
     background-position: center;
@@ -178,64 +157,8 @@ body {
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
 }
-/* Media queries */
-@media (max-width: 1199.98px) {
-    .heading-welcome {
-        font-size: 4.5rem;
-    }
-}
-
-@media (max-width: 991.98px) {
-    .heading-welcome {
-        font-size: 4rem;
-    }
-    
-    .btn-contrate {
-        padding: 12px 35px;
-        font-size: 1.1rem;
-    }
-}
-
-@media (max-width: 767.98px) {
-    .welcome-container {
-        padding: 60px 0;
-    }
-    
-    .heading-welcome {
-        font-size: 3.2rem;
-    }
-    
-    .btn-contrate {
-        padding: 10px 30px;
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 575.98px) {
-    .welcome-container {
-        padding: 40px 0;
-    }
-    
-    .heading-welcome {
-        font-size: 2.5rem;
-    }
-    
-    .btn-contrate {
-        padding: 10px 25px;
-        font-size: 0.9rem;
-    }
-}
-
-@media (max-width: 350px) {
-    .heading-welcome {
-        font-size: 2rem;
-    }
-}
-
 
 /*formulário*/
-
-
 .btn-contrate:hover {
     background-color: #e64500;
 }
@@ -245,7 +168,6 @@ body.escurecido .btn-contrate {
     pointer-events: none;
 }
 
-/* Estilo do modal */
 .modal-content {
     border-radius: 10px;
     padding: 20px;
@@ -265,7 +187,7 @@ body.escurecido .btn-contrate {
 
 .modal-footer {
     border-top: none;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .modal-body {
@@ -349,48 +271,12 @@ textarea.form-control {
     margin-bottom: 20px;
 }
 
-/* Animações para transição entre partes */
 .slide-out {
     animation: slideOut 0.5s forwards;
 }
 
-/* Fim de formulario */
-
-@keyframes slideOut {
-    from {
-        transform: translateX(0);
-        opacity: 1;
-    }
-    to {
-        transform: translateX(-100px);
-        opacity: 0;
-    }
-}
-/* Animação de transição entre as partes */
-@keyframes slideIn {
-    from {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-@keyframes slideOut {
-    from {
-        transform: translateX(0);
-        opacity: 1;
-    }
-    to {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-}
-
 .form-part {
-    display: none; /* Inicialmente oculto */
+    display: none; 
     animation: slideIn 0.5s ease forwards;
 }
 
@@ -398,44 +284,15 @@ textarea.form-control {
     animation: slideOut 0.5s ease forwards;
 }
 
-/* Exibir a parte ativa */
 .form-part.active {
     display: block;
 }
 
-/* Animação de "pulo" para a mensagem de sucesso */
-@keyframes jump {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-20px);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-
 #part3 h2 {
-    animation: jump 0.5s ease 2; /* Pula duas vezes */
-}
-/* carrossel formulario */
-.carrossel {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.imagem-carrossel {
-    max-width: 100%;
-    max-height: 300px;
-    border-radius: 8px;
-    transition: opacity 1s ease-in-out;
+    animation: jump 0.5s ease 2; 
 }
 
 /* 1° Section - Sobre Nós */
-
 .sobrenos {
     background-image: url("../imagens/sobrenos.png");
     background-size: cover;
@@ -446,14 +303,12 @@ textarea.form-control {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-left: 5%;
 }
-
 
 .title-section {
     color: #ffffff;
     font-weight: 700;
-    margin-bottom: 30px;
+    margin-bottom: 100px;
     letter-spacing: 1px;
 }
 
@@ -479,182 +334,344 @@ textarea.form-control {
     gap: 20px;
 }
 
-
 .text1 p, .text2 p {
     line-height: 1.6;
 }
 
-/* Media queries */
-@media (max-width: 991.98px) {
-    .sobrenos {
-        padding: 40px 0;
-    }
-    
-    .title-section {
-        font-size: 2.2rem;
-    }
-    
-    .title-what {
-        font-size: 1.6rem;
-        text-align: center;
-    }
-    
-    .text1, .text2 {
-        padding: 15px;
-        margin-bottom: 20px;
-    }
-}
-
-@media (max-width: 767.98px) {
-    .title-section {
-        font-size: 2rem;
-    }
-    
-    .linha-horizontal {
-        margin: 15px auto;
-    }
-    
-    .text1 p, .text2 p {
-        font-size: 1rem;
-        text-align: center;
-    }
-}
-
-@media (max-width: 575.98px) {
-    .sobrenos {
-        padding: 30px 0;
-    }
-    
-    .title-section {
-        font-size: 1.8rem;
-    }
-    
-    .title-what {
-        font-size: 1.4rem;
-    }
-}
 /* 2° Section - Sobre nós #2 */
-
 .sobrenos2 {
     background-image: url("../imagens/sobrenos2.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    padding: 2rem;
+    position: relative;
 }
 
-#sobrenos2-divCelular {
+#sobrenos2-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Aumentei a largura máxima */
+    margin: 0 auto;
+    height: 80vh; /* Altura baseada na viewport */
+}
+
+#phone-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-image: url("../imagens/tigrincelular.png");
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    width: 700px;
-    height: 100vh;
+}
+
+#phone-screen {
+    position: absolute;
+    top: 35%; /* Ajuste fino de posicionamento */
+    left: 51%;
+    transform: translateX(-50%);
+    width: 47%; /* Largura ajustada */
+    height: 65%; /* Altura ajustada */
+    overflow-y: hidden; /* Scroll apenas se necessário */
     display: flex;
     align-items: center;
-    justify-content: center;
-    overflow: hidden;
+    padding: 2rem 1.5rem;
+    box-sizing: border-box;
 }
 
-#tela-divCelular {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 40%;
-    margin-left: 10px;
-    width: 325px;
-    height: 550px;
-    overflow: hidden;
-    background-color: #6363633e;
-    padding-top: 2em;
-    border-radius: 5px;
-}
-
-#text-divCelular {
-    text-align: center;
-    width: 300px;
-    height: 400px;
-    margin-bottom: 25%;
-    overflow: hidden;
-}
-
-#text-divCelular p {
-    font-size: 19px;
+#text-content p {
+    position: relative;
     color: #ffffff;
-    line-height: 1.6;
-    margin-bottom: 20px;
-    margin: auto;
+    font-size: clamp(1rem, 1.8vw, 1.2rem); /* Texto um pouco maior */
+    line-height: 1.7;
+    text-align: center;
+    width: 100%;
 }
 
-/* Section 3 - valores */
+/* Barra de scroll estilizada (opcional) */
+#phone-screen::-webkit-scrollbar {
+    width: 4px;
+}
+#phone-screen::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.3);
+    border-radius: 2px;
+}
 
+@media (max-width: 768px) {
+    #sobrenos2-container {
+        height: 65vh;
+        max-width: 600px;
+    }
+    #phone-screen {
+        width: 62%;
+        height: 58%;
+        padding: 1.5rem 1rem;
+    }
+    #text-content p {
+        font-size: clamp(0.95rem, 2vw, 1.2rem);
+    }
+}
 
-.valores {
+/* Hr das Sections */
+    .hr-section {
+        background: linear-gradient(45deg, rgba(255, 93, 0, 0.3), #FF5D00, rgba(255, 93, 0, 0.3));
+        width: 50vw;
+        height: 4px;
+        margin: 0 auto;
+        border-radius: 10px;
+    }
+
+/* Section 3 - objetivos */
+.objetivos {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh; 
-    background-image: url("../imagens/fundovalores.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 20px; 
+    padding: 20px;
+    background: #000;
 } 
 
+.content-obj {
+    width: 100%;
+    max-width: 1800px;
+    padding: 0 15px;
+}
 
-#conteinerideais {
+#container-obj {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     flex-wrap: wrap; 
-    gap: 150px; 
-    max-width: 1200px; 
-    width: 100%; 
+    gap: 20px;
+    width: 100%;
+    padding: 0 10px;
+}
+
+.obj-title {
+    margin-bottom: 40px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    z-index: 10;
+    letter-spacing: 1px;
 }
 
 .card-vlr {
     background-color: #000000;
     border: 2px solid #FF5D00;
     border-radius: 10px; 
-    padding: 20px;
-    width: 300px;
-    height: 650px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 15px;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    min-height: 380px;
+    transition: all 0.4s ease-in-out;
+    position: relative;
+    overflow: hidden;
     cursor: pointer;
-}
-
-
-.card-vlr:hover {
-    transform: scale(1.2); 
-    box-shadow: 0 4px 20px rgba(255, 93, 0, 0.5); 
+    margin: 0 auto;
 }
 
 .card-vlr h1 {
-    font-size: 1.5em;
+    font-size: 1.3em;
     color: #FF5D00;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
+    text-align: center;
 }
-
 
 .card-vlr p {
-    font-size: 1em;
+    font-size: 0.9em;
     color: #ffffff;
-    line-height: 1.6;
+    line-height: 1.5;
+    text-align: justify;
 }
 
-/* Section 4 - Equipes carrosel */
+/* Efeitos hover */
+.card-vlr::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        0deg, 
+        transparent, 
+        transparent 30%, 
+        rgba(255, 93, 0, 0.3)
+    );
+    transform: rotate(-45deg);
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
 
-.equipe {
+.card-vlr:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 10px 25px rgba(255, 93, 0, 0.4);
+}
+
+.card-vlr:hover::before {
+    opacity: 1;
+}
+
+
+/* 375px - Smartphones pequenos */
+@media (max-width: 375px) {
+    .obj-title {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+    
+    .card-vlr {
+        padding: 12px;
+        min-height: 350px;
+    }
+    
+    .card-vlr p {
+        font-size: 0.85em;
+    }
+}
+
+/* 576px - Smartphones maiores/Tablets pequenos */
+@media (min-width: 376px) and (max-width: 576px) {
+    .obj-title {
+        font-size: 2.2rem;
+    }
+    
+    .card-vlr {
+        min-height: 400px;
+    }
+    
+    .card-vlr p {
+        font-size: 0.95em;
+    }
+}
+
+/* 768px - Tablets */
+@media (min-width: 577px) and (max-width: 768px) {
+    .obj-title {
+        font-size: 2.5rem;
+        margin-bottom: 60px;
+    }
+    
+    #container-obj {
+        gap: 30px;
+    }
+    
+    .card-vlr {
+        width: calc(50% - 15px);
+        min-height: 450px;
+    }
+    
+    .card-vlr p {
+        font-size: 1em;
+    }
+}
+
+/* 992px - Laptops pequenos */
+@media (min-width: 769px) and (max-width: 992px) {
+    .obj-title {
+        font-size: 3rem;
+        margin-bottom: 80px;
+    }
+    
+    #container-obj {
+        gap: 40px;
+    }
+    
+    .card-vlr {
+        width: calc(50% - 20px);
+        min-height: 480px;
+    }
+    
+    .card-vlr p {
+        font-size: 1.05em;
+    }
+}
+
+/* 1024px - Laptops médios */
+@media (min-width: 993px) and (max-width: 1024px) {
+    .obj-title {
+        font-size: 3.5rem;
+    }
+    
+    #container-obj {
+        gap: 50px;
+    }
+    
+    .card-vlr {
+        width: calc(33.333% - 35px);
+        min-height: 500px;
+    }
+}
+
+/* 1200px - Desktops */
+@media (min-width: 1025px) {
+    .obj-title {
+        font-size: 4rem;
+        margin-bottom: 100px;
+    }
+    
+    #container-obj {
+        gap: 80px;
+        padding: 0 20px;
+    }
+    
+    .card-vlr {
+        width: calc(33.333% - 55px);
+        min-height: 520px;
+        padding: 20px;
+    }
+    
+    .card-vlr h1 {
+        font-size: 1.5em;
+    }
+    
+    .card-vlr p {
+        font-size: 1.1em;
+        line-height: 1.6;
+    }
+}
+
+
+/* Section 4 - Equipes carrosel */
+#equipe {
+    position: relative;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
     background: linear-gradient(#c94f08, #000000);
+    padding-top: 10px
+
 }
 
+.cntnr-swp {
+    margin-bottom: 200px;
+}
+
+.team-title {
+    margin: 80px auto;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 4rem; 
+    z-index: 10;
+    letter-spacing: 2px; 
+}
+
+.team-title .title-detail{
+    color:#ff924a;
+    font-weight: 600px; 
+}
 .card-wrapper {
     max-width: 1110px;
     width: 100%;
@@ -668,11 +685,15 @@ textarea.form-control {
     padding: 0;
 }
 
+.card-link {
+    height: 650px;
+}
+
 .card-list .card-item {
     list-style: none;
     display: flex;
     justify-content: center;
-    align-items: center; /* Adicionado para centralizar verticalmente */
+    align-items: center; 
 }
 
 .card-list .card-item .card-link {
@@ -684,7 +705,7 @@ textarea.form-control {
     text-decoration: none;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.05);
     transition: 0.2s ease;
-    width: 100%; /* Garante que o link ocupe toda a largura do slide */
+    width: 100%; 
 }
 
 .card-list .card-link .card-image {
@@ -712,8 +733,6 @@ textarea.form-control {
     font-weight: 600;
 }
 
-
-
 .card-list .card-link:hover .card-button {
     color: #fff;
     background: #ff8800;
@@ -735,154 +754,28 @@ textarea.form-control {
     margin-top: -35px;
 }
 
-/* Responsivo */
-
-@media screen and (max-width:768px){
-    .card-wrapper{
-        margin: 0 10px 25px;
-    }
-
-    .card-wrapper .swiper-slide-button{
-        display: none;
-
-    }
+.card-description {
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+    line-height: 1.5;
 }
 
-/* Estilos para telas 768px (celular) */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .div-wlc h1 {
-        font-size: 3em;
-    }
-
-    .fundo {
-        justify-content: center;
-        padding-left: 0;
-    }
-
-    .sobrenos, .sobrenos2, .valores {
-        height: auto;
-        padding: 20px;
-    }
-
-    #sobrenos-text {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .text1, .text2 {
-        width: 100%;
-        height: auto;
-    }
-
-    .linha {
-        height: 5px;
-        width: 80%;
-        margin: 20px auto;
-    }
-
-    #sobrenos2-divCelular {
-        width: 100%;
-        height: auto;
-    }
-
-    #tela-divCelular {
-        width: 90%;
-        height: auto;
-        margin-top: 20%;
-    }
-
-    #text-divCelular {
-        width: 90%;
-        height: auto;
-        margin-bottom: 10%;
-    }
-
-    .card {
-        width: 100%;
-        height: auto;
-    }
-}
-
-/* Estilos para telas entre 768px e 1024px (tablets) */
-@media (min-width: 768px) and (max-width: 1024px) {
-    .div-wlc h1 {
-        font-size: 4em;
-    }
-
-    .fundo {
-        justify-content: center;
-        padding-left: 0;
-    }
-
-    .sobrenos, .sobrenos2, .valores {
-        height: auto;
-        padding: 20px;
-    }
-
-    #sobrenos-text {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .text1, .text2 {
-        width: 100%;
-        height: auto;
-    }
-
-    .linha {
-        height: 5px;
-        width: 80%;
-        margin: 20px auto;
-    }
-
-    #sobrenos2-divCelular {
-        width: 100%;
-        height: auto;
-    }
-
-    #tela-divCelular {
-        width: 90%;
-        height: auto;
-        margin-top: 20%;
-    }
-
-    #text-divCelular {
-        width: 90%;
-        height: auto;
-        margin-bottom: 10%;
-    }
-
-    .card {
-        width: 100%;
-        height: auto;
-    }
-}
-
-
+/*Footer*/
 .footer {
     background-color: black;
     color: white;
     padding: 20px 0;
     text-align: center;
-    width: 100%; /* Garante que o footer ocupe toda a largura */
+    width: 100%; 
 }
 
 .footer-container {
     display: flex;
     justify-content: space-between;
-    max-width: 1200px; /* Largura máxima do conteúdo */
-    margin: 0 auto; /* Centraliza o container */
-    padding: 0 20px; /* Adiciona um padding lateral */
+    max-width: 1200px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
     flex-wrap: wrap;
 }
 
@@ -891,13 +784,13 @@ textarea.form-control {
 .footer-right {
     flex: 1;
     padding: 10px;
-    min-width: 250px; /* Garante que as colunas não fiquem muito estreitas */
+    min-width: 250px; 
 }
 
 .footer-left p,
 .footer-center p {
     font-size: 14px;
-    margin-bottom: 10px; /* Ajuste no espaçamento */
+    margin-bottom: 10px; 
 }
 
 .footer-right ul {
@@ -927,7 +820,134 @@ textarea.form-control {
     transform: scale(1.2);
 }
 
+
+/*Media query responsivo*/
+
+/* width: 1119px*/
+@media (max-width: 1199.98px) {
+    .heading-welcome {
+        font-size: 4.5rem;
+    }
+
+    .fundo {
+        background-image: url("../imagens/fundo.png");
+        background-size: cover;
+        background-position: 75%;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start; 
+    }
+
+    .heading-welcome {
+        font-size: 4.5rem;
+    }
+
+    #text-divCelular p {
+        padding-top: 200px;
+        font-size: 17px;
+    }
+}
+
+/* width: 992px*/
+
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        padding: 10px;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+
+
+    #sobrenos2-divCelular {
+        background-size: 60vh;
+    }
+
+    #tela-divCelular {
+        margin-top: 10%;
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .sobrenos {
+        padding: 40px 0;
+    }
+    
+    .title-section {
+        font-size: 2.2rem;
+    }
+    
+    .title-what {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+    
+    .text1, .text2 {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    .fundo {
+        background-image: url("../imagens/fundoresponsa.png");
+        background-size: cover;
+        background-position: 75%;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start; 
+    }
+
+    .heading-welcome {
+        font-size: 4rem;
+    }
+    
+    .btn-contrate {
+        padding: 12px 35px;
+        padding-bottom: 37px;
+        font-size: 1.1rem;
+    }
+
+    .navbar-collapse {
+        padding: 10px;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+
+     /* Sobre nós #2 - 992px */
+    .sobrenos2 {
+        padding-bottom: 150px;
+    }
+
+    #sobrenos2-container {
+        height: 80vh;
+    }
+
+
+    #phone-screen {
+        width: 30%;
+        height: 50%;
+        padding: 1rem;
+        overflow: hidden; 
+    }
+    
+    #phone-screen {
+        width: 46%;
+        height: 60%;
+    }
+}
+
+/* width: 768px */
+
 @media (max-width: 768px) {
+
+    .objetivos{
+        background-color: #000000;
+        background-image: none;
+    }
     .footer-container {
         flex-direction: column;
         text-align: center;
@@ -936,22 +956,288 @@ textarea.form-control {
     .footer-left,
     .footer-center,
     .footer-right {
-        margin-bottom: 20px; /* Aumenta o espaçamento entre as seções */
+        margin-bottom: 20px; 
     }
 
-    .footer-right ul {
-        padding: 0;
+
+    .footer-right {
+        padding-left: 70px;
     }
 
     .footer-right li {
         display: block;
         margin-bottom: 10px;
     }
+
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .div-wlc h1 {
+        font-size: 3em;
+    }
+
+    .fundo {
+        justify-content: center;
+        padding-left: 0;
+    }
+
+    .sobrenos, .objetivos {
+        height: auto;
+        padding: 20px;
+    }
+
+    #sobrenos-text {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .text1, .text2 {
+        width: 100%;
+        height: auto;
+    }
+
+    .linha {
+        height: 5px;
+        width: 80%;
+        margin: 20px auto;
+    }
+
+    #sobrenos2-divCelular {
+        width: 100%;
+        height: auto;
+        background-size: 60vh;
+    }
+
+    #tela-divCelular {
+        width: 90%;
+        height: auto;
+        margin-top: 30%;
+        margin-bottom: 10%;
+    }
+
+
+    .card {
+        width: 100%;
+        height: auto;
+    }
+    
+    .card-wrapper .swiper-slide-button{
+        display: none;
+
+    }
 }
 
-.card-description {
-    font-size: 14px;
-    color: #666;
-    margin-top: 10px;
-    line-height: 1.5;
+@media (min-width: 768px) and (max-width: 1024px) {
+    .div-wlc h1 {
+        font-size: 4em;
+    }
+
+    .fundo {
+        justify-content: center;
+        padding-left: 0;
+    }
+
+    .sobrenos, .objetivos {
+        height: auto;
+        padding: 20px;
+    }
+
+    #sobrenos-text {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .text1, .text2 {
+        width: 100%;
+        height: auto;
+    }
+
+    .linha {
+        height: 5px;
+        width: 80%;
+        margin: 20px auto;
+    }
+
+    .card {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* width: 767px */
+
+@media (max-width: 767.98px) {
+    .title-section {
+        font-size: 2rem;
+    }
+    
+    .linha-horizontal {
+        margin: 15px auto;
+    }
+    
+    .text1 p, .text2 p {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .welcome-container {
+        padding: 60px 0;
+    }
+    
+    .heading-welcome {
+        font-size: 3.2rem;
+    }
+    
+    .btn-contrate {
+        padding: 10px 30px;
+        padding-bottom: 35px;
+        font-size: 1rem;
+    }
+}
+
+/* width: 575px */
+@media (max-width: 576px) {
+
+    .sobrenos {
+        padding: 30px 0;
+    }
+    
+    .title-section {
+        font-size: 1.8rem;
+    }
+    
+    .title-what {
+        font-size: 1.4rem;
+    }
+
+    .welcome-container {
+        padding: 40px 0;
+    }
+    
+    .heading-welcome {
+        font-size: 2.5rem;
+    }
+    
+    .btn-contrate {
+        padding: 10px 25px;
+        padding-bottom: 30px;
+        font-size: 0.9rem;
+    }
+
+    /* Sobre nós #2 - 576px */
+    .sobrenos2 {
+        padding: 0;
+        padding-bottom: 150px;
+    }
+
+    #phone-container {
+        height: 70vh;
+    }
+
+    #phone-screen {
+        width: 55.5%;
+        height: 50%;
+        padding: 1rem;
+        overflow: auto; 
+    }
+
+    
+    #text-content p {
+        margin-top: 200px;
+        text-align: center;
+    }
+    
+}
+
+/* width: 350px */
+@media (max-width: 375px) {
+    
+    .heading-welcome {
+        font-size: 2rem;
+    }
+
+    .heading-welcome {
+        font-size: 2rem;
+    }
+
+    .title-section {
+        color: #ffffff;
+        font-weight: 700;
+        margin: 50px 0;
+        letter-spacing: 1px;
+    }
+
+    /* Sobre nós #2 - 350px */
+    .sobrenos2 {
+        padding-bottom: 150px;
+    }
+
+    #phone-container {
+        height: 70vh;
+    }
+
+    #phone-screen {
+        width: 55.5%;
+        height: 63%;
+        padding: 0.5em;
+    }
+    
+    #text-content p {
+        margin-top: 200px;
+    }
+}
+
+/* Keyframes Formulário */
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+}
+
+@keyframes jump {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
